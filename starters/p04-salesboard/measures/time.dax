@@ -1,0 +1,9 @@
+// SalesBoard time measures, for DAX query view (task 10).
+// They need dim_date marked as the date table on full_date, and the base measures
+// from base.dax in the model.
+
+// TODO(task 10): DEFINE three measures:
+//   Revenue YTD    year-to-date revenue on dim_date[full_date]
+//   Revenue LY     revenue in the same period last year
+//   Revenue YoY %  the change on last year, as a fraction (DIVIDE)
+// TODO(task 10): EVALUATE Revenue and the three new measures by dim_date[year] and dim_date[month].
