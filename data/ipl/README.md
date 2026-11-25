@@ -48,7 +48,7 @@ Notes:
 
 Numbers for checking your own results: **17,523 rows**, 74 matches, 10 teams, 13 venues, 1,426 sixes, 27,450 runs in total (`SUM(runs_total)`). Checked again on 24 November 2026 with DuckDB 2.0.1.
 
-Count the rows with the DuckDB command-line tool (Launchpad task 13):
+Count the rows with the DuckDB command-line tool (Launchpad task 14):
 
 ```bash
 cd ~/da-ess-kit/data/ipl

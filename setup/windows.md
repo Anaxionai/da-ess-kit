@@ -18,14 +18,16 @@ The versions are in [`VERSIONS.md`](../VERSIONS.md).
 
 | Step | What | When |
 |---|---|---|
-| 1 to 4 | Git, VS Code, Git Bash in VS Code, line endings | Launchpad tasks 11 to 13 |
-| 5 to 7 | uv, Python 3.12, UTF-8, the DuckDB command-line tool | Launchpad task 13 |
-| 8 | Clone the course kit | Launchpad task 13 |
-| 9 | Check your Excel version | Before Launchpad task 2 (your first spreadsheet) |
+| 1 | Git for Windows, with Git Bash | Launchpad task 11 (the terminal card) |
+| 2 | VS Code, then its Python and Jupyter extensions | VS Code in Launchpad task 12, the extensions in task 13 |
+| 3 to 6 | Git Bash in VS Code, line endings, uv, Python 3.12, UTF-8 | Launchpad task 13 ("Finish the laptop, part 1") |
+| 8, then 7 | Clone the course kit, then the DuckDB command-line tool | Launchpad task 14 ("Finish the laptop, part 2") |
+| 9 | Check your Excel version | Before Launchpad task 2 (your first spreadsheet); task 14 writes it down |
 | 10 | Power BI Desktop | Before P4 SalesBoard (week 7). Install it in week 1 if you can: it is a big download |
 | 11 | Smart App Control | Before P3 MatchStats (week 6). Do the test in week 1 |
 
-Run every command in **Git Bash**, unless a step says PowerShell.
+Task 13 does Steps 3 to 6 and the extensions of Step 2. Task 14 does Step 8 first (the clone), then Steps 7 and 9.
+Run every command in **Git Bash**, unless a step says PowerShell. Only the two installers (Steps 5 and 7) and the first check of Step 11 run in PowerShell.
 
 ## Step 1: Git for Windows
 
@@ -53,7 +55,7 @@ Check it in Git Bash: `code --version` prints a version number.
 1. In VS Code, press Ctrl+Shift+P and type `Terminal: Select Default Profile`.
 2. Choose **Git Bash**.
 
-Check it: open a new terminal with Ctrl+`. The prompt shows `MINGW64`.
+Check it: open a new terminal (**Terminal**, then **New Terminal** in the top menu). The prompt shows `MINGW64`, and `uname -s` prints a line that starts with `MINGW64`.
 
 ## Step 4: Line endings
 
@@ -62,7 +64,11 @@ Windows ends each line of a text file with two characters (CRLF), Linux and macO
 1. In VS Code, open **Settings** (Ctrl+,) and search for `eol`.
 2. Set **Files: Eol** to `\n`.
 
-Check it: open a new file. The status bar at the bottom right shows `LF`, not `CRLF`.
+Check it: open a new file. The status bar at the bottom right shows `LF`, not `CRLF`. In Git Bash, this prints the setting:
+
+```bash
+grep eol "$APPDATA/Code/User/settings.json"
+```
 
 ## Step 5: uv and Python 3.12
 
@@ -99,9 +105,9 @@ uv python pin 3.12
 
 ## Step 6: Python and UTF-8
 
-In Git Bash, Python cannot print characters such as `£` or `₹` into a pipe or a file unless UTF-8 mode is on. Turn it on once, in **PowerShell**:
+In Git Bash, Python cannot print characters such as `£` or `₹` into a pipe or a file unless UTF-8 mode is on. Turn it on once, in Git Bash (the same command works in PowerShell):
 
-```powershell
+```bash
 setx PYTHONUTF8 1
 ```
 
