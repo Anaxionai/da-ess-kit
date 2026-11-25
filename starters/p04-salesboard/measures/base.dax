@@ -1,0 +1,23 @@
+// SalesBoard base measures, written and run in Power BI Desktop's DAX query view.
+// Paste this whole file into a new DAX query tab, then select Run.
+// When every number matches your SQL checks, select "Update model with changes"
+// and save the query over this file (task 9).
+
+DEFINE
+    // Done for you: the first two measures.
+    MEASURE fact_sales[Revenue] = SUM ( fact_sales[amount] )
+    MEASURE fact_sales[Units] = SUM ( fact_sales[quantity] )
+
+    // TODO(task 9): MEASURE fact_sales[Orders]: distinct invoice_no, cancellations left out.
+    // TODO(task 9): MEASURE fact_sales[Customers]: the AI move. Save the AI's answer, as written,
+    //               in measures/ai_customers.dax first; then prove or fix it against check_customers.sql.
+    // TODO(task 9): MEASURE fact_sales[Average Order Value] = DIVIDE ( [Revenue], [Orders] )
+
+EVALUATE
+SUMMARIZECOLUMNS (
+    dim_date[year],
+    "Revenue", [Revenue],
+    "Units", [Units]
+    // TODO(task 9): add "Orders", "Customers" and "Average Order Value".
+)
+ORDER BY dim_date[year]

@@ -1,0 +1,18 @@
+# Check out every text file with LF line endings, on Windows too.
+# Scripts, SQL, DAX, M code and data files then look the same on every laptop.
+* text=auto eol=lf
+
+# Files that are not text: Git must never change their bytes.
+*.xlsx binary
+*.xlsm binary
+*.pbix binary
+*.pbit binary
+*.parquet binary
+*.duckdb binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.zip binary
+*.gz binary

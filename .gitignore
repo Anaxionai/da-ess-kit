@@ -1,0 +1,32 @@
+# Data stays out of Git: the kit's scripts download or make it on your laptop.
+# The kit's own data/ folder is committed (small course files and scripts), so
+# these lines name each download folder and file instead of all of data/.
+data/exports/
+data/online_retail_II.csv
+data/online_retail_II.csv.part
+data/matches/
+data/returns/
+data/staff/
+data/energy/
+data/salesdesk/exports/
+starters/*/data/
+capstone/data/*/
+*.duckdb
+*.duckdb.wal
+*.parquet
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Office lock files and Power BI files
+~$*
+*.pbix
+*.pbit
+
+# Editors and Windows
+.vscode/
+Thumbs.db
+desktop.ini

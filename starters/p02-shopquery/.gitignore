@@ -1,0 +1,5 @@
+# Data and databases stay out of Git: they live in ~/shopquery-data/.
+# Task 21 writes the star's Parquet files into data/ here.
+data/
+*.duckdb
+*.duckdb.wal
