@@ -6,7 +6,7 @@ Your task briefs link to files in this kit.
 
 ## Get the kit
 
-Run this once, in Git Bash (Launchpad task 13, "Finish the laptop"):
+Run this once, in Git Bash (Launchpad task 14, "Finish the laptop, part 2"):
 
 ```bash
 cd ~ && git clone https://github.com/Anaxionai/da-ess-kit.git
